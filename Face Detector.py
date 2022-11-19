@@ -17,3 +17,6 @@ while True:
         minSize = (30,30),
         flags = cv2.CASCADE_SCALE_IMAGE
     )
+
+    for ( x , y , width , height) in faces:
+        cv2.rectangle(frame , ( x , y ), ( x + width , y + height), (255,255,0))
