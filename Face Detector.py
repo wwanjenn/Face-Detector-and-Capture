@@ -19,9 +19,10 @@ while True:
     )
 
     for ( x , y , width , height) in faces:
-        cv2.rectangle(frame , ( x , y ), ( x + width , y + height), (255,255,0), 2)
+        cv2.rectangle(frame , ( x , y ), ( x + width , y + height), (0,255,255), 2)
+        cv2.imwrite("face.png", frame)
 
-    cv2.imshow("Face", frame)
+    cv2.imshow("Face Detector", frame)
 
     if cv2.waitKey(1) == ord("q"):
         break
